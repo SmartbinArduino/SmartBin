@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Lixeira</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-left">
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="assets/logo.png" alt="Logo do site" class="logo-img">
+        </a>
+
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a class="nav-link home" href="#">Home</a></li>
+          <li><a class="nav-link informacoes" href="#informacoes">Informações</a></li>
+          <li><a class="nav-link contato" href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+
+        <label class="switch" id="theme-toggle" aria-label="Alternar tema">
+          <input type="checkbox" id="theme-checkbox" onclick="toggleTheme()">
+          <span class="slider"></span>
+        </label>
+
+        <button class="login-btn">Login</button>
+      </div>
+    </div>
+  </header>
+
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-container">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#informacoes">Informações</a></li>
+          <li><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="card hero-card">
+          <div class="hero-content">
+            <h1>Eco Lixeira</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="informacoes" class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 1</p>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 2</p>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 3</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-grid info-grid-2">
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 4</p>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 5</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-grid info-grid-1">
+          <div class="card info-card">
+            <div class="info-content">
+              <p>Informação 6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contatos" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <h2>Contatos</h2>
+          <div class="contact-info">
+            <div class="contact-item"><span class="contact-label">Email:</span><span
+                class="contact-value">contato@siteinformativo.com</span></div>
+            <div class="contact-item"><span class="contact-label">Telefone:</span><span class="contact-value">(00)
+                1234-5678</span></div>
+            <div class="contact-item"><span class="contact-label">Endereço:</span><span class="contact-value">Rua
+                Exemplo, 123 - Cidade, Estado</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="current-year"></span> Site Informativo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+
+</html>
