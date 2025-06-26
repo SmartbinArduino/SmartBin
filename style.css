@@ -55,6 +55,9 @@ body {
   line-height: 1.5;
   transition: background-color var(--transition-duration), color var(--transition-duration);
 }
+main{
+  margin-top: 17px;
+}
 
 .container {
   width: 100%;
@@ -70,6 +73,7 @@ a {
 
 ul {
   list-style: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 button {
@@ -98,6 +102,11 @@ button {
   background-color:#4D964D;
   backdrop-filter: blur(8px);
   transition: background-color var(--transition-duration), border-color var(--transition-duration);
+  
+}
+
+.p{
+  
 }
 
 .header-container {
@@ -106,6 +115,7 @@ button {
   align-items: center;
   justify-content: space-between;
   background-color: #4D964D;
+  
 }
 
 .header-left {
@@ -291,11 +301,12 @@ html.dark .theme-indicator-dark {
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: var(--radius);
+  border-radius: 10px;
   background-color: #193C19;
   color: #ffffff;
   border: none;
   transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
 }
 
 .login-btn:hover {
@@ -343,39 +354,40 @@ html.dark .theme-indicator-dark {
 }
 
 /* Hero Section */
-.hero-section {
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.hero-card {
-  border: none;
-}
-
 .hero-content {
   height: 200px;
   width: 100%;
-  background-color: var(--muted);
+  background-image: url('/assets/fundo-ecológico.webp'); /* mudar imagem do fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 8px; 
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(5px); 
+  border-radius: 8px; 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.hero-content h1 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.hero-overlay p {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif; /* Aplicando a Poppins */
 }
-
-.hero-content p {
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-  margin-bottom: 1.5rem;
-}
-
 .theme-switch-demo {
   display: flex;
   align-items: center;
@@ -430,17 +442,35 @@ html.dark .theme-switch-handle {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+  .info-grid-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-grid-1 .info-card {
+    grid-column: 1 / span 3;
+  }
+}
+
+
 .info-card {
   overflow: hidden;
 }
 
 .info-content {
-  height: 150px;
+  height: 400px;
   width: 100%;
   background-color: var(--muted);
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  cursor: default;
+}
+
+.info-text:hover {
+  transform: scale(1.05); /* Dando a sensação de clique */
+  cursor: pointer;
 }
 
 .info-content p {
